@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Recognition Web App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-purple-500">
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="container mx-auto py-8">
+            <h1 class="text-4xl font-bold text-center text-white mb-8">Face Recognition Web App</h1>
+            <div class="max-w-md mx-auto">
+                <button id="start_stop_btn" class="block w-full py-3 px-4 rounded-md bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold text-center hover:from-pink-600 hover:to-red-600 transition-all">Start Webcam</button>
+                <div class="mt-4 p-4 border rounded-lg shadow-md" id="video_container" style="display: none;">
+                    <img id="video_feed" src="" class="rounded-lg border-4 border-white" width="640" height="480" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const startStopBtn = document.getElementById("start_stop_btn");
+        const videoContainer = document.getElementById("video_container");
+        const videoFeed = document.getElementById("video_feed");
+
+        let webcamOpen = false;
+
+        startStopBtn.addEventListener("click", () => {
+            if (webcamOpen) {
+                videoFeed.src = "";
+                videoContainer.style.display = "none";
+                startStopBtn.innerText = "Start Webcam";
+            } else {
+                videoFeed.src = "{{ video_feed_url }}"; // Replace this with your actual video feed URL if needed
+                videoContainer.style.display = "block";
+                startStopBtn.innerText = "Stop Webcam";
+            }
+            webcamOpen = !webcamOpen;
+        });
+    </script>
+</body>
+</html>

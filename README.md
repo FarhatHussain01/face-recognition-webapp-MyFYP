@@ -10,6 +10,7 @@ This web application allows users to utilize their webcam to perform real-time f
 
 ## Prerequisites
 
+
 Before running the application, make sure you have the following installed:
 
 - Python 3.x

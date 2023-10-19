@@ -31,5 +31,5 @@ The app will detect faces in real-time and attempt to recognize them using pre-t
 Detected faces will be highlighted with a green rectangle, and the recognized name (if available) will be displayed above the rectangle.
 If a face cannot be recognized with high confidence, it will be labeled as "Unknown."
 
-Copyright © [Syed Farhat Hussain Shah] [Year]. All rights reserved.
+Copyright © [Syed Farhat Hussain Shah , Hassan Ali] [2023]. All rights reserved.
 ...
